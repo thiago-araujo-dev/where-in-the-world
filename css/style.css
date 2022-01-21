@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Nunito Sans', sans-serif;
+}
+ul, ol { list-style: none;}
+header {
+    background-color: white;
+    border-bottom: 1px solid rgb(251 251 251);;
+    box-shadow: 0px 1px 4px rgb(199 180 180);
+}
+.header-text {
+    display: grid;
+    /* justify-content: space-between; */
+    font-weight: bold;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    padding: 1rem;
+}
+.header-text i {
+    padding: 0.5rem;
+    font-weight: bold;
+}
+.header-text p {
+    cursor: pointer;
+}
+.search-box, .card, .filter {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: #fff;
+    align-items: center;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 1rem rgba(153, 153, 153, 0.7);
+    margin: 1rem;   
+}
+.search-input {
+    background: transparent;
+    border: 0;
+    font-size: 1rem;
+    outline: 0;
+}
+.search-icon {
+    color: #aaa;
+    font-size: 1.25rem;
+  }
+.filter {
+    grid-template-columns: 1fr;
+}
+.filter select{
+    padding: 0.5rem;
+    border: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.card {
+    grid-template-columns: 1fr;
+    padding: 0;
+    overflow: hidden;
+    gap: 0;
+}
+.card-image img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    object-fit: cover;
+}
+.card-content { padding: 1.5rem;}
+.card-content h2 { margin-bottom: 1rem;}
+.card-content ul li { margin-bottom: 0.5rem;}
+.dark-mode {
+    background-color: hsl(207, 26%, 17%);
+    color: hsl(0, 0%, 100%);
+}
+.dark-mode header, .dark-mode .card, .dark-mode .search-box, .dark-mode .filter, .dark-mode .filter select {
+    background-color: hsl(209, 23%, 22%);
+}
+.dark-mode .card, .dark-mode .search-box, .dark-mode .filter, .dark-mode .filter select{
+    color: hsl(0, 0%, 100%);
+}
+.dark-mode header, .dark-mode .card, .dark-mode .search-box, .dark-mode .filter {
+    box-shadow: 0 0 1rem hsl(210, 26%, 11%); 
+    border-color: hsl(207, 26%, 17%);
+}
+.dark-mode .card-image img {
+    border-color: hsl(207, 26%, 17%);
+}
+@media screen and (min-width: 600px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-image {
+        display: flex;
+        height: 250px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

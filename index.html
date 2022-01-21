@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Outfit:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Rest-Countries</title>
+</head>
+
+<body id="page-body">
+    <header>
+
+        <div class="header-text">
+            <h3>Where in the world?</h3>
+            <p id="theme-switcher"><i class="fa fa-moon-o" aria-hidden="true"></i> Dark Mode</p>
+        </div>
+        <!--div header-text-->
+    </header>
+    <div class="search-box">
+        <i class="fa fa-search search-icon"></i>
+        <input type="text" class="search-input" placeholder="Search for a country...">
+    </div>
+    <div class="filter">
+        <select name="select">
+            <option value="Filter by Region" disabled selected>Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+    </div>
+    <main>
+        <div class="card">
+            <div class="card-image">
+                <img src="https://flagcdn.com/br.svg">
+            </div>
+            <div class="card-content">
+                <h2>Brazil</h2>
+                <ul>
+                    <li><strong>Population:</strong> 206.135.893</li>
+                    <li><strong>Region:</strong> Americas</li>
+                    <li><strong>Capital:</strong> Brasília</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img
+                    src="https://flagcdn.com/jp.svg">
+            </div>
+            <div class="card-content">
+                <h2>Japan</h2>
+                <ul>
+                    <li><strong>Population:</strong> 125.947.000</li>
+                    <li><strong>Region:</strong> Asia</li>
+                    <li><strong>Capital:</strong> Tokyo</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-image">
+                <img
+                    src="https://flagcdn.com/gb.svg">
+            </div>
+            <div class="card-content">
+                <h2>United Kingdom</h2>
+                <ul>
+                    <li><strong>Population:</strong>  67.220.000</li>
+                    <li><strong>Region:</strong> Europe</li>
+                    <li><strong>Capital:</strong> London</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script>
+        let body = document.getElementById("page-body");
+        let btnSwitcher = document.getElementById("theme-switcher");
+        btnSwitcher.onclick = function() {
+            body.classList.toggle('dark-mode');
+        }
+        </script>
+</body>
+
+</html>
